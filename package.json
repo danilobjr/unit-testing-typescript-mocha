@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --content-base build --inline",
-    "test": "webpack-dev-server 'mocha!ts!./tests/index.ts' --output-filename test.js --port 8081"
+    "test": "mocha-webpack --webpack-config webpack.config-test.js \"tests/**/*.ts\""
   },
   "author": "Danilo Barros <danilobjr@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2",
+    "mocha-webpack": "^0.7.0",
     "ts-loader": "^0.9.4",
     "typescript": "^2.0.3",
     "webpack": "^1.13.2",
